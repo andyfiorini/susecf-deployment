@@ -1,0 +1,20 @@
+function check_err {
+   if [ $? -ne 0 ];
+   then
+       echo "Error on script $0, line number $BASH_LINENO";
+ 	if [ ! -z ${FUNCNAME[1]} ];
+	then 
+  	  echo "  Function:${FUNCNAME[1]}"
+   	  if [ ! -z ${FUNCNAME[2]} ];
+  	  then 
+            echo "  ¬ inside Function:${FUNCNAME[2]}";
+ 	    if [ ! -z ${FUNCNAME[3]} ];
+	    then 
+		echo "    ¬ inside Function:${FUNCNAME[3]}";
+            fi
+          fi
+        fi
+        exit 254;
+   fi
+}
+
