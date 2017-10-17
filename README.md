@@ -1,4 +1,4 @@
-# H1 Suse CF Deployment
+# Suse CF Deployment
 
 This repo contains the scripts to deploy Kubernetes, some required utilities and SuseCF.
 
